@@ -9,7 +9,9 @@
     "deploy": "next build && next export",
     "lint": "eslint components lib pages store utils",
     "lint:fix": "eslint --fix components lib pages store utils",
-    "seed": "chec-seed seeds"
+    "seed": "chec-seed seeds",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@chec/commerce.js": "^2.0.1",
@@ -17,7 +19,7 @@
     "body-scroll-lock": "^2.6.4",
     "dotenv": "^8.2.0",
     "netlify-plugin-onboarding": "^1.0.0",
-    "next": "9.3.3",
+    "next": "10.0.6",
     "next-redux-wrapper": "^6.0.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
@@ -31,7 +33,8 @@
     "react-transition-group": "^4.3.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "swiper": "^5.2.1"
+    "swiper": "^5.2.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@chec/seeder": "^1.1.0",
@@ -45,5 +48,6 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "2.x"
-  }
+  },
+  "snyk": true
 }
